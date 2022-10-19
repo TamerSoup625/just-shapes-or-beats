@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://resources/level_structs/level_struct.gd" type="Script" id=1]
+[ext_resource path="res://music/silence_10s.mp3" type="AudioStream" id=2]
+[ext_resource path="res://resources/level_structs/group_lvl_key.gd" type="Script" id=3]
+[ext_resource path="res://resources/level_structs/hazard_group.gd" type="Script" id=4]
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+keys = [  ]
+modifiers = {
+}
+inputs = PoolStringArray( "" )
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 3 )
+time = 0.0
+index = 0
+inputs = {
+}
+
+[resource]
+script = ExtResource( 1 )
+song = ExtResource( 2 )
+song_name = ""
+song_artist = ""
+song_is_remix = false
+song_playlist = ""
+playback_pos = 0.0
+key_list = [ SubResource( 3 ) ]
+checkpoints = [ 3.0, 5.0, 7.0 ]
+hazard_group_list = [ SubResource( 2 ) ]
+is_hardcore = false
+other_variant = ""

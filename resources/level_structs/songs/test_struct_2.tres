@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://resources/level_structs/level_struct.gd" type="Script" id=1]
+[ext_resource path="res://images/logo.png" type="Texture" id=2]
+[ext_resource path="res://music/silence_10s.mp3" type="AudioStream" id=3]
+
+[resource]
+script = ExtResource( 1 )
+song = ExtResource( 3 )
+song_name = "Name2"
+song_artist = "Artist2"
+song_is_remix = true
+song_playlist = "EP2"
+song_cover = ExtResource( 2 )
+playback_pos = 0.0
+key_list = [  ]
+checkpoints = [ 0.01 ]
+hazard_group_list = [  ]
+is_hardcore = false
+other_variant = ""

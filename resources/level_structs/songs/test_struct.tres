@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://resources/level_structs/level_struct.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://music/silence_10s.mp3" type="AudioStream" id=3]
+[ext_resource path="res://resources/level_structs/pulse_bomb_lvl_key.gd" type="Script" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 4 )
+time = 0.0
+spawn_time_offset = 1.0
+end_time_offset = 1.0
+position_x = "1024"
+position_y = "300"
+travel_x = "-512"
+travel_y = "0"
+amount = 128
+speed = 100.0
+base_rotation = "rand_range(0, TAU)"
+bullets_spin = false
+
+[resource]
+script = ExtResource( 1 )
+song = ExtResource( 3 )
+song_name = "Name"
+song_artist = "Artist"
+song_is_remix = true
+song_playlist = "EP"
+song_cover = ExtResource( 2 )
+playback_pos = 0.0
+key_list = [ SubResource( 1 ) ]
+checkpoints = [ 2.0 ]
+hazard_group_list = [  ]
+is_hardcore = false
+other_variant = ""

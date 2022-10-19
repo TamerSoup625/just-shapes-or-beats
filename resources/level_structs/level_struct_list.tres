@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://resources/level_structs/level_struct_list.gd" type="Script" id=1]
+[ext_resource path="res://resources/level_structs/songs/terabyte_connection.tres" type="Resource" id=4]
+
+[resource]
+script = ExtResource( 1 )
+struct_list = [ ExtResource( 4 ) ]
+struct_uid = [ "terabyte_connection" ]

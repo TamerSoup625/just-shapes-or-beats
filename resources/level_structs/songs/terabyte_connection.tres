@@ -1,0 +1,1919 @@
+[gd_resource type="Resource" load_steps=152 format=2]
+
+[ext_resource path="res://resources/level_structs/bullet_spinner_lvl_key.gd" type="Script" id=1]
+[ext_resource path="res://scenes/hazards/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/hazards/pulse_bomb.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/hazards/laser.tscn" type="PackedScene" id=4]
+[ext_resource path="res://music/Camellia - +ERABY+E CONNEC+10N.mp3" type="AudioStream" id=5]
+[ext_resource path="res://resources/level_structs/bullet_lvl_key.gd" type="Script" id=6]
+[ext_resource path="res://resources/level_structs/hazard_group.gd" type="Script" id=7]
+[ext_resource path="res://resources/level_structs/group_lvl_key.gd" type="Script" id=8]
+[ext_resource path="res://resources/level_structs/custom_node_lvl_key.gd" type="Script" id=9]
+[ext_resource path="res://resources/level_structs/track_level_key.gd" type="Script" id=10]
+[ext_resource path="res://resources/level_structs/level_struct.gd" type="Script" id=11]
+[ext_resource path="res://resources/level_structs/sequence_lvl_key.gd" type="Script" id=12]
+[ext_resource path="res://resources/level_structs/bullet_pulse_lvl_key.gd" type="Script" id=13]
+[ext_resource path="res://resources/level_structs/shake_level_key.gd" type="Script" id=14]
+[ext_resource path="res://resources/level_structs/cam_push_lvl_key.gd" type="Script" id=15]
+[ext_resource path="res://images/tera_10.jpg" type="Texture" id=16]
+
+[sub_resource type="Resource" id=25]
+script = ExtResource( 9 )
+time = 0.0
+spawn_time_offset = 0.1
+end_time_offset = 0.1
+position_x = "0"
+position_y = "300"
+_scene = ExtResource( 3 )
+_extras = {
+}
+
+[sub_resource type="Resource" id=27]
+script = ExtResource( 6 )
+time = 0.0
+type = 0
+bullet_or_floor = 0
+position_x = "0"
+position_y = "300"
+speed_x = "0"
+speed_y = "0"
+size = "16"
+rotation_degrees = "0"
+torque_degrees = "0"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 0.0
+dance_floor_here_time = 0.0
+drawing_extra = [  ]
+
+[sub_resource type="Resource" id=26]
+script = ExtResource( 7 )
+keys = [ SubResource( 25 ), SubResource( 27 ) ]
+modifiers = {
+"0.position_x": "x",
+"1.position_x": "x"
+}
+inputs = PoolStringArray( "x" )
+
+[sub_resource type="Resource" id=31]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 0.0
+end_time_offset = 0.0
+position_x = "0"
+position_y = "0"
+type = 0
+create_time = 0.0
+create_times = -1
+speed_x = "0"
+speed_y = "0"
+size = 16.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.0
+sin_rotates = false
+dna_couple = false
+
+[sub_resource type="Resource" id=30]
+script = ExtResource( 7 )
+keys = [ SubResource( 31 ) ]
+modifiers = {
+}
+inputs = PoolStringArray(  )
+
+[sub_resource type="Resource" id=48]
+script = ExtResource( 13 )
+time = 1.305
+spawn_time_offset = 0.0
+end_time_offset = 0.0
+position_x = "0"
+position_y = "0"
+base_rotation = "0"
+amount = 24
+bullet_type = 0
+bullet_speed = 200.0
+bullet_size = 64.0
+bullet_extras = {
+"torque": "TAU"
+}
+
+[sub_resource type="Resource" id=49]
+script = ExtResource( 6 )
+time = 0.0
+type = 0
+bullet_or_floor = 1
+position_x = "0"
+position_y = "0"
+speed_x = "0"
+speed_y = "0"
+size = "256"
+rotation_degrees = "45"
+torque_degrees = "0"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 1.305
+dance_floor_here_time = 0.131
+drawing_extra = [  ]
+
+[sub_resource type="Resource" id=53]
+script = ExtResource( 14 )
+time = 1.305
+force = 20.0
+duration = 0.522
+decay = true
+
+[sub_resource type="Resource" id=50]
+resource_name = "Losagna"
+script = ExtResource( 7 )
+keys = [ SubResource( 48 ), SubResource( 49 ), SubResource( 53 ) ]
+modifiers = {
+"0.position_x": "position.x",
+"0.position_y": "position.y",
+"1.position_x": "position.x",
+"1.position_y": "position.y"
+}
+inputs = PoolStringArray( "position" )
+
+[sub_resource type="Resource" id=59]
+script = ExtResource( 6 )
+time = 0.0
+type = 2
+bullet_or_floor = 1
+position_x = "0"
+position_y = "0"
+speed_x = "0"
+speed_y = "0"
+size = "128"
+rotation_degrees = "0"
+torque_degrees = "360"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 1.305
+dance_floor_here_time = 26.1
+drawing_extra = [ 4.5 ]
+
+[sub_resource type="Resource" id=60]
+script = ExtResource( 1 )
+time = 1.305
+spawn_time_offset = 0.0
+end_time_offset = 0.0
+position_x = "0"
+position_y = "0"
+base_rotation = "rand_range(0, TAU)"
+torque = 0.312
+amount = 0
+time_offset = 0.131
+spin_count = 4
+bullet_type = 0
+bullet_speed = 250.0
+bullet_size = 16.0
+bullet_extras = {
+"torque": "TAU"
+}
+
+[sub_resource type="Resource" id=61]
+resource_name = "StripeCube"
+script = ExtResource( 7 )
+keys = [ SubResource( 59 ), SubResource( 60 ) ]
+modifiers = {
+"0.dance_floor_here_time": "time",
+"0.position_x": "position.x",
+"0.position_y": "position.y",
+"0.size": "size",
+"1.amount": "time / 0.13043",
+"1.position_x": "position.x",
+"1.position_y": "position.y"
+}
+inputs = PoolStringArray( "position", "time", "size" )
+
+[sub_resource type="Resource" id=76]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 0.522
+position_x = "100"
+position_y = "0"
+type = 0
+create_time = 0.028
+create_times = 20
+speed_x = "32"
+speed_y = "0"
+size = 30.0
+rotation = "0.5 * PI"
+torque = "0"
+auto_despawn = true
+sin_x = 100.0
+sin_y = 0.0
+sin_freq = 0.5
+sin_lifetime_base = "rand_range(0, TAU)"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=79]
+script = ExtResource( 10 )
+time = 0.391
+spawn_time_offset = 1.566
+end_time_offset = 0.522
+position_x = "1024 - 100"
+position_y = "600"
+type = 0
+create_time = 0.028
+create_times = 20
+speed_x = "32"
+speed_y = "0"
+size = 30.0
+rotation = "-0.5 * PI"
+torque = "0"
+auto_despawn = true
+sin_x = 100.0
+sin_y = 0.0
+sin_freq = 0.5
+sin_lifetime_base = "rand_range(0, TAU)"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=77]
+script = ExtResource( 7 )
+keys = [ SubResource( 76 ), SubResource( 79 ) ]
+modifiers = {
+"0.position_y": "str(600 * inv)",
+"0.rotation": "str(0.5 * PI - PI * inv)",
+"1.position_y": "str(600 * (1 - inv))",
+"1.rotation": "str(-0.5 * PI + PI * inv)"
+}
+inputs = PoolStringArray( "inv" )
+
+[sub_resource type="Resource" id=93]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 1.566
+position_x = "1024"
+position_y = "150"
+type = 0
+create_time = 0.028
+create_times = -1
+speed_x = "32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 150.0
+sin_freq = 0.25
+sin_lifetime_base = "rand_range(0, TAU)"
+sin_lifetime_multi = 0.2
+sin_rotates = true
+dna_couple = true
+
+[sub_resource type="Resource" id=94]
+script = ExtResource( 7 )
+keys = [ SubResource( 93 ) ]
+modifiers = {
+"0.position_x": "str(pos.x)",
+"0.position_y": "str(pos.y)",
+"0.rotation": "str(dir)"
+}
+inputs = PoolStringArray( "pos", "dir" )
+
+[sub_resource type="Resource" id=116]
+script = ExtResource( 6 )
+time = 0.261
+type = 2
+bullet_or_floor = 1
+position_x = "0"
+position_y = "0"
+speed_x = "0"
+speed_y = "0"
+size = "256"
+rotation_degrees = "0"
+torque_degrees = "360"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 1.044
+dance_floor_here_time = 26.1
+drawing_extra = [ 4.5 ]
+
+[sub_resource type="Resource" id=117]
+script = ExtResource( 1 )
+time = 1.305
+spawn_time_offset = 0.0
+end_time_offset = 0.0
+position_x = "0"
+position_y = "0"
+base_rotation = "rand_range(0, TAU)"
+torque = 0.39
+amount = 0
+time_offset = 0.131
+spin_count = 4
+bullet_type = 0
+bullet_speed = 250.0
+bullet_size = 24.0
+bullet_extras = {
+"torque": "TAU"
+}
+
+[sub_resource type="Resource" id=118]
+resource_name = "Phase4Cube"
+script = ExtResource( 7 )
+keys = [ SubResource( 116 ), SubResource( 117 ) ]
+modifiers = {
+"0.dance_floor_here_time": "time",
+"0.position_x": "position.x",
+"0.position_y": "position.y",
+"1.amount": "time / 0.13043",
+"1.position_x": "position.x",
+"1.position_y": "position.y"
+}
+inputs = PoolStringArray( "position", "time" )
+
+[sub_resource type="Resource" id=130]
+resource_name = "Left"
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 1.044
+position_x = "0"
+position_y = "0"
+type = 0
+create_time = 0.028
+create_times = 33
+speed_x = "32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 150.0
+sin_freq = 0.25
+sin_lifetime_base = "rand_range(0, TAU)"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=131]
+resource_name = "Right"
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 1.044
+position_x = "1024"
+position_y = "0"
+type = 0
+create_time = 0.028
+create_times = 33
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 150.0
+sin_freq = 0.25
+sin_lifetime_base = "rand_range(0, TAU)"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=132]
+resource_name = "TwinTrack"
+script = ExtResource( 7 )
+keys = [ SubResource( 130 ), SubResource( 131 ) ]
+modifiers = {
+"0.position_y": "str(if3(450, invert, 150))",
+"1.position_y": "str(if3(150, invert, 450))"
+}
+inputs = PoolStringArray( "invert" )
+
+[sub_resource type="Resource" id=139]
+script = ExtResource( 6 )
+time = 0.0
+type = 0
+bullet_or_floor = 0
+position_x = "0"
+position_y = "rand_range(0, 600)"
+speed_x = "rand_range(150, 300)"
+speed_y = "rand_range(-100, 100)"
+size = "12"
+rotation_degrees = "rand_range(0, 360)"
+torque_degrees = "720"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 0.0
+dance_floor_here_time = 0.0
+drawing_extra = [  ]
+
+[sub_resource type="Resource" id=136]
+script = ExtResource( 12 )
+time = 0.0
+key = SubResource( 139 )
+modifiers = {
+}
+is_time_modifier_xi = false
+time_modifier = "if3(0, i < 6, 0.26087 * 2)"
+times = 12
+
+[sub_resource type="Resource" id=140]
+script = ExtResource( 6 )
+time = 0.0
+type = 0
+bullet_or_floor = 0
+position_x = "1024"
+position_y = "rand_range(0, 600)"
+speed_x = "-rand_range(150, 300)"
+speed_y = "rand_range(-100, 100)"
+size = "12"
+rotation_degrees = "rand_range(0, 360)"
+torque_degrees = "720"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 0.0
+dance_floor_here_time = 0.0
+drawing_extra = [  ]
+
+[sub_resource type="Resource" id=141]
+script = ExtResource( 12 )
+time = 0.0
+key = SubResource( 140 )
+modifiers = {
+}
+is_time_modifier_xi = false
+time_modifier = "if3(0, i < 6, 0.26087 * 2)"
+times = 12
+
+[sub_resource type="Resource" id=137]
+resource_name = "BulletsTwins"
+script = ExtResource( 7 )
+keys = [ SubResource( 136 ), SubResource( 141 ) ]
+modifiers = {
+}
+inputs = PoolStringArray(  )
+
+[sub_resource type="Resource" id=149]
+script = ExtResource( 6 )
+time = 0.0
+type = 2
+bullet_or_floor = 1
+position_x = "512"
+position_y = "300"
+speed_x = "0"
+speed_y = "0"
+size = "256"
+rotation_degrees = "0"
+torque_degrees = "0"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 0.0
+dance_floor_here_time = 4.174
+drawing_extra = [ 5.5 ]
+
+[sub_resource type="Resource" id=157]
+script = ExtResource( 1 )
+time = 0.0
+spawn_time_offset = 0.0
+end_time_offset = 0.0
+position_x = "512"
+position_y = "300"
+base_rotation = "rand_range(0, TAU)"
+torque = 0.35
+amount = 16
+time_offset = 0.131
+spin_count = 4
+bullet_type = 0
+bullet_speed = 350.0
+bullet_size = 32.0
+bullet_extras = {
+"torque": "TAU"
+}
+
+[sub_resource type="Resource" id=151]
+resource_name = "LastStripeCube"
+script = ExtResource( 7 )
+keys = [ SubResource( 149 ), SubResource( 157 ) ]
+modifiers = {
+"0.torque_degrees": "str(if3(360, clockwise, -360))",
+"1.torque": "if3(0.3, clockwise, -0.3)"
+}
+inputs = PoolStringArray( "clockwise" )
+
+[sub_resource type="Resource" id=55]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 13.825
+position_x = "1024"
+position_y = "300"
+type = 0
+create_time = 0.056
+create_times = -1
+speed_x = "-32"
+speed_y = "0"
+size = 16.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 300.0
+sin_freq = 0.25
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.15
+sin_rotates = false
+dna_couple = false
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 6 )
+time = 0.0
+type = 0
+bullet_or_floor = 0
+position_x = "1024"
+position_y = "rand_range(0, 600)"
+speed_x = "-250"
+speed_y = "rand_range(-50, 50)"
+size = "8"
+rotation_degrees = "0"
+torque_degrees = "360"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 0.0
+dance_floor_here_time = 0.0
+drawing_extra = [  ]
+
+[sub_resource type="Resource" id=17]
+script = ExtResource( 12 )
+time = 1.826
+key = SubResource( 16 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.261 * .25"
+times = 36
+
+[sub_resource type="Resource" id=18]
+script = ExtResource( 12 )
+time = 4.957
+key = SubResource( 16 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.261 * .25"
+times = 36
+
+[sub_resource type="Resource" id=19]
+script = ExtResource( 12 )
+time = 9.391
+key = SubResource( 16 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.261 * .25"
+times = 24
+
+[sub_resource type="Resource" id=20]
+script = ExtResource( 12 )
+time = 12.261
+key = SubResource( 16 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.261 * .25"
+times = 36
+
+[sub_resource type="Resource" id=21]
+script = ExtResource( 12 )
+time = 15.391
+key = SubResource( 16 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.261 * .25"
+times = 20
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 9 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 0.261
+position_x = "1024"
+position_y = "300"
+_scene = ExtResource( 2 )
+_extras = {
+"direction": "2",
+"peek_lenght": "40",
+"size": "50"
+}
+
+[sub_resource type="Resource" id=24]
+script = ExtResource( 12 )
+time = 15.977
+key = SubResource( 9 )
+modifiers = {
+"position_y": "150 + 150 * i"
+}
+is_time_modifier_xi = true
+time_modifier = "0"
+times = 3
+
+[sub_resource type="Resource" id=32]
+script = ExtResource( 10 )
+time = 16.042
+spawn_time_offset = 1.566
+end_time_offset = 4.175
+position_x = "1024"
+position_y = "300"
+type = 0
+create_time = 0.028
+create_times = -1
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 150.0
+sin_freq = 0.25
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=33]
+script = ExtResource( 9 )
+time = 0.0
+spawn_time_offset = 1.044
+end_time_offset = 0.261
+position_x = "0"
+position_y = "300"
+_scene = ExtResource( 4 )
+_extras = {
+"direction": "0.5 * PI"
+}
+
+[sub_resource type="Resource" id=34]
+script = ExtResource( 12 )
+time = 18.13
+key = SubResource( 33 )
+modifiers = {
+"position_x": "[128*6, 128*5, 128*7][i]"
+}
+is_time_modifier_xi = true
+time_modifier = "0.26087 * .25"
+times = 3
+
+[sub_resource type="Resource" id=36]
+script = ExtResource( 6 )
+time = 0.0
+type = 0
+bullet_or_floor = 0
+position_x = "1024"
+position_y = "rand_range(0, 600)"
+speed_x = "rand_range(-300, -250)"
+speed_y = "rand_range(-100, 100)"
+size = "8"
+rotation_degrees = "0"
+torque_degrees = "720"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 0.0
+dance_floor_here_time = 0.0
+drawing_extra = [  ]
+
+[sub_resource type="Resource" id=35]
+script = ExtResource( 12 )
+time = 19.565
+key = SubResource( 36 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.261 * .25"
+times = 34
+
+[sub_resource type="Resource" id=37]
+script = ExtResource( 10 )
+time = 20.217
+spawn_time_offset = 1.566
+end_time_offset = 3.652
+position_x = "1024"
+position_y = "150"
+type = 0
+create_time = 0.028
+create_times = -1
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 150.0
+sin_freq = 0.25
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=38]
+script = ExtResource( 12 )
+time = 22.304
+key = SubResource( 33 )
+modifiers = {
+"position_x": "[128*2, 128*1, 128*3][i]"
+}
+is_time_modifier_xi = true
+time_modifier = "0.26087 * .25"
+times = 3
+
+[sub_resource type="Resource" id=39]
+script = ExtResource( 12 )
+time = 23.739
+key = SubResource( 36 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.261 * .25"
+times = 26
+
+[sub_resource type="Resource" id=40]
+script = ExtResource( 10 )
+time = 24.39
+spawn_time_offset = 1.566
+end_time_offset = 4.239
+position_x = "1024"
+position_y = "450"
+type = 0
+create_time = 0.028
+create_times = -1
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 150.0
+sin_freq = 0.25
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=41]
+script = ExtResource( 9 )
+time = 0.0
+spawn_time_offset = 1.044
+end_time_offset = 0.261
+position_x = "512"
+position_y = "0"
+_scene = ExtResource( 4 )
+_extras = {
+"direction": "PI"
+}
+
+[sub_resource type="Resource" id=42]
+script = ExtResource( 12 )
+time = 26.478
+key = SubResource( 41 )
+modifiers = {
+"position_y": "[75*2, 75*1, 75*3][i]"
+}
+is_time_modifier_xi = true
+time_modifier = "0.26087 * .25"
+times = 3
+
+[sub_resource type="Resource" id=43]
+script = ExtResource( 12 )
+time = 27.913
+key = SubResource( 36 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.261 * .25"
+times = 34
+
+[sub_resource type="Resource" id=44]
+script = ExtResource( 10 )
+time = 28.564
+spawn_time_offset = 1.566
+end_time_offset = 5.609
+position_x = "1024"
+position_y = "300"
+type = 0
+create_time = 0.028
+create_times = -1
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 150.0
+sin_freq = 0.25
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=45]
+script = ExtResource( 12 )
+time = 30.651
+key = SubResource( 41 )
+modifiers = {
+"position_y": "[75*6, 75*5, 75*7][i]"
+}
+is_time_modifier_xi = true
+time_modifier = "0.26087 * .25"
+times = 3
+
+[sub_resource type="Resource" id=46]
+script = ExtResource( 12 )
+time = 32.087
+key = SubResource( 36 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.261 * .25"
+times = 56
+
+[sub_resource type="Resource" id=51]
+script = ExtResource( 8 )
+time = 35.086
+index = 2
+inputs = {
+"position": "Vector2(1024, 300)"
+}
+
+[sub_resource type="Resource" id=56]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.044
+end_time_offset = 16.565
+position_x = "1024"
+position_y = "0"
+type = 0
+create_time = 0.112
+create_times = 33
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 8.0
+sin_freq = 3.0
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.25
+sin_rotates = false
+dna_couple = false
+
+[sub_resource type="Resource" id=57]
+script = ExtResource( 12 )
+time = 35.347
+key = SubResource( 56 )
+modifiers = {
+"position_y": "[4, 596][i]"
+}
+is_time_modifier_xi = true
+time_modifier = "0"
+times = 2
+
+[sub_resource type="Resource" id=54]
+script = ExtResource( 8 )
+time = 39.26
+index = 2
+inputs = {
+"position": "Vector2(0, 300)"
+}
+
+[sub_resource type="Resource" id=62]
+script = ExtResource( 8 )
+time = 43.434
+index = 3
+inputs = {
+"position": "Vector2(512, 300)",
+"size": "192",
+"time": "1.043"
+}
+
+[sub_resource type="Resource" id=64]
+script = ExtResource( 8 )
+time = 0.0
+index = 3
+inputs = {
+"position": "Vector2()",
+"size": "98",
+"time": "1.043"
+}
+
+[sub_resource type="Resource" id=65]
+script = ExtResource( 12 )
+time = 44.477
+key = SubResource( 64 )
+modifiers = {
+":inputs:position": "\"Vector2\" + str(Vector2(512 + -200 * cos(2.692794 * (i + 1)), 300 + -200 * sin(2.692794 * (i + 1))))"
+}
+is_time_modifier_xi = true
+time_modifier = "1.043"
+times = 7
+
+[sub_resource type="Resource" id=66]
+script = ExtResource( 8 )
+time = 51.651
+index = 2
+inputs = {
+"position": "Vector2(512, 300)"
+}
+
+[sub_resource type="Resource" id=69]
+script = ExtResource( 10 )
+time = 55.695
+spawn_time_offset = 1.566
+end_time_offset = 0.261
+position_x = "1024"
+position_y = "300"
+type = 0
+create_time = 0.028
+create_times = 33
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 300.0
+sin_freq = 0.25
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=70]
+script = ExtResource( 14 )
+time = 57.261
+force = 5.0
+duration = 2.739
+decay = false
+
+[sub_resource type="Resource" id=68]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 0.261
+end_time_offset = 0.261
+position_x = "1024"
+position_y = "300"
+type = 0
+create_time = 0.028
+create_times = 33
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 300.0
+sin_freq = 0.25
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=67]
+script = ExtResource( 12 )
+time = 57.273
+key = SubResource( 68 )
+modifiers = {
+"sin_lifetime_base": "str(0.4 + 0.1 * i)"
+}
+is_time_modifier_xi = true
+time_modifier = "2.739 * 0.1"
+times = 8
+
+[sub_resource type="Resource" id=74]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 1.566
+position_x = "1024"
+position_y = "150"
+type = 0
+create_time = 0.028
+create_times = 33
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 150.0
+sin_freq = 0.25
+sin_lifetime_base = "rand_range(0, TAU)"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=75]
+resource_name = "MainDna1"
+script = ExtResource( 12 )
+time = 60.26
+key = SubResource( 74 )
+modifiers = {
+"position_y": "str([150, 450, 450, 150, 150, 450][i])"
+}
+is_time_modifier_xi = true
+time_modifier = "2.087"
+times = 6
+
+[sub_resource type="Resource" id=80]
+script = ExtResource( 9 )
+time = 0.0
+spawn_time_offset = 1.044
+end_time_offset = 0.261
+position_x = "512"
+position_y = "0"
+_scene = ExtResource( 2 )
+_extras = {
+"direction": "2",
+"size": "50"
+}
+
+[sub_resource type="Resource" id=81]
+resource_name = "Walls"
+script = ExtResource( 12 )
+time = 60.391
+key = SubResource( 80 )
+modifiers = {
+"position_y": "[25, 575][i]"
+}
+is_time_modifier_xi = true
+time_modifier = "0"
+times = 2
+
+[sub_resource type="Resource" id=73]
+script = ExtResource( 6 )
+time = 0.0
+type = 0
+bullet_or_floor = 0
+position_x = "1024"
+position_y = "rand_range(0, 600)"
+speed_x = "rand_range(-300, -250)"
+speed_y = "rand_range(-100, 100)"
+size = "8"
+rotation_degrees = "0"
+torque_degrees = "720"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 0.0
+dance_floor_here_time = 0.0
+drawing_extra = [  ]
+
+[sub_resource type="Resource" id=72]
+resource_name = "Bullets1"
+script = ExtResource( 12 )
+time = 61.304
+key = SubResource( 73 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.26087"
+times = 60
+
+[sub_resource type="Resource" id=78]
+script = ExtResource( 8 )
+time = 62.999
+index = 4
+inputs = {
+"inv": "1"
+}
+
+[sub_resource type="Resource" id=82]
+script = ExtResource( 6 )
+time = 0.0
+type = 2
+bullet_or_floor = 1
+position_x = "1024 - 196"
+position_y = "300"
+speed_x = "0"
+speed_y = "0"
+size = "128"
+rotation_degrees = "0"
+torque_degrees = "720"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 1.044
+dance_floor_here_time = 0.261
+drawing_extra = [ 4.5 ]
+
+[sub_resource type="Resource" id=83]
+script = ExtResource( 12 )
+time = 67.434
+key = SubResource( 82 )
+modifiers = {
+"dance_floor_warn_time": "if3(1.044, i == 0, 0.0)"
+}
+is_time_modifier_xi = false
+time_modifier = "0.13043 * i + if3(0, i == 0, 1.044)"
+times = 10
+
+[sub_resource type="Resource" id=84]
+script = ExtResource( 8 )
+time = 0.0
+index = 3
+inputs = {
+"position": "Vector2()",
+"size": "96",
+"time": "0"
+}
+
+[sub_resource type="Resource" id=85]
+script = ExtResource( 12 )
+time = 68.478
+key = SubResource( 84 )
+modifiers = {
+":inputs:position": "\"Vector2(1024 - 128, %s)\" % [200, 400, 300][i]",
+":inputs:time": "str(if3(3, i == 2, 2.087))"
+}
+is_time_modifier_xi = true
+time_modifier = "2.087"
+times = 2
+
+[sub_resource type="Resource" id=86]
+script = ExtResource( 8 )
+time = 71.347
+index = 4
+inputs = {
+"inv": "0"
+}
+
+[sub_resource type="Resource" id=87]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 0.261
+position_x = "1024"
+position_y = "300"
+type = 0
+create_time = 0.028
+create_times = 33
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 150.0
+sin_freq = 0.25
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=88]
+resource_name = "EndDna1"
+script = ExtResource( 12 )
+time = 72.391
+key = SubResource( 87 )
+modifiers = {
+"sin_lifetime_base": "str(0.4 + if3(-0.4, i == 0, 0.1 * i))",
+"sin_y": "range_lerp(i, 0, 10, 150, 300)",
+"spawn_time_offset": "if3(1.566, i == 0, 0.261)"
+}
+is_time_modifier_xi = false
+time_modifier = "0.26087 * i + if3(0, i == 0, 1.305)"
+times = 10
+
+[sub_resource type="Resource" id=89]
+script = ExtResource( 14 )
+time = 73.957
+force = 3.0
+duration = 3.0
+decay = false
+
+[sub_resource type="Resource" id=90]
+script = ExtResource( 9 )
+time = 0.0
+spawn_time_offset = 1.305
+end_time_offset = 0.261
+position_x = "0"
+position_y = "300"
+_scene = ExtResource( 4 )
+_extras = {
+"direction": "0.5 * PI",
+"size": "15"
+}
+
+[sub_resource type="Resource" id=91]
+script = ExtResource( 12 )
+time = 75.652
+key = SubResource( 90 )
+modifiers = {
+"position_x": "str(if3(512 - 7.5 * i, i % 2 == 0, 512 + 7.5 * (i+1)))"
+}
+is_time_modifier_xi = false
+time_modifier = "0.06522 * 0.5 * stepify(i, 2)"
+times = 21
+
+[sub_resource type="Resource" id=95]
+script = ExtResource( 8 )
+time = 76.825
+index = 5
+inputs = {
+"dir": "-0.75 * PI",
+"pos": "Vector2(1024, 600)"
+}
+
+[sub_resource type="Resource" id=92]
+script = ExtResource( 9 )
+time = 77.086
+spawn_time_offset = 1.044
+end_time_offset = 0.261
+position_x = "512"
+position_y = "300"
+_scene = ExtResource( 2 )
+_extras = {
+"direction": "1",
+"size": "300"
+}
+
+[sub_resource type="Resource" id=107]
+script = ExtResource( 9 )
+time = 0.0
+spawn_time_offset = 1.044
+end_time_offset = 0.261
+position_x = "512"
+position_y = "rand_range(0, 600)"
+_scene = ExtResource( 4 )
+_extras = {
+"direction": "if3(0, randi() % 2 == 0, PI)",
+"size": "16"
+}
+
+[sub_resource type="Resource" id=97]
+resource_name = "Laser1"
+script = ExtResource( 12 )
+time = 77.216
+key = SubResource( 107 )
+modifiers = {
+}
+is_time_modifier_xi = false
+time_modifier = "0.26087 * i + if3(0, i < 31, .26087)"
+times = 54
+
+[sub_resource type="Resource" id=96]
+script = ExtResource( 8 )
+time = 77.868
+index = 5
+inputs = {
+"dir": "0.75 * PI",
+"pos": "Vector2(1024, 0)"
+}
+
+[sub_resource type="Resource" id=99]
+resource_name = "Spinner2"
+script = ExtResource( 8 )
+time = 78.912
+index = 3
+inputs = {
+"position": "Vector2(1024, 250)",
+"size": "96",
+"time": "2.348"
+}
+
+[sub_resource type="Resource" id=98]
+script = ExtResource( 8 )
+time = 80.999
+index = 5
+inputs = {
+"dir": "0.25 * PI",
+"pos": "Vector2(0, 0)"
+}
+
+[sub_resource type="Resource" id=100]
+script = ExtResource( 8 )
+time = 82.173
+index = 5
+inputs = {
+"dir": "-0.25 * PI",
+"pos": "Vector2(0, 600)"
+}
+
+[sub_resource type="Resource" id=101]
+resource_name = "Spinner2"
+script = ExtResource( 8 )
+time = 83.217
+index = 3
+inputs = {
+"position": "Vector2(1024, 350)",
+"size": "96",
+"time": "1.825"
+}
+
+[sub_resource type="Resource" id=103]
+script = ExtResource( 8 )
+time = 85.173
+index = 5
+inputs = {
+"dir": "1.125 * PI",
+"pos": "Vector2(1024, 500 + 391.86 * .5)"
+}
+
+[sub_resource type="Resource" id=102]
+script = ExtResource( 8 )
+time = 86.347
+index = 5
+inputs = {
+"dir": "0.125 * PI",
+"pos": "Vector2(0, 100 - 391.86 * .5)"
+}
+
+[sub_resource type="Resource" id=104]
+resource_name = "Spinner2"
+script = ExtResource( 8 )
+time = 87.26
+index = 3
+inputs = {
+"position": "Vector2(1024, 300)",
+"size": "96",
+"time": "2.348"
+}
+
+[sub_resource type="Resource" id=105]
+script = ExtResource( 8 )
+time = 89.347
+index = 5
+inputs = {
+"dir": "0.375 * PI",
+"pos": "Vector2(312 - 267.87 * .5, -50)"
+}
+
+[sub_resource type="Resource" id=106]
+script = ExtResource( 8 )
+time = 90.39
+index = 5
+inputs = {
+"dir": "-0.625 * PI",
+"pos": "Vector2(712 + 267.87 * .5, 650)"
+}
+
+[sub_resource type="Resource" id=108]
+script = ExtResource( 9 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 0.261
+position_x = "512"
+position_y = "300"
+_scene = ExtResource( 4 )
+_extras = {
+"direction": "0.5 * PI",
+"size": "24"
+}
+
+[sub_resource type="Resource" id=109]
+script = ExtResource( 12 )
+time = 91.173
+key = SubResource( 108 )
+modifiers = {
+"position_x": "str((32 + 64 * (i % 5)) * if3(1, i <= 4, -1) + if3(0, i <= 4, 1024))"
+}
+is_time_modifier_xi = false
+time_modifier = ".195653 * (i % 5)"
+times = 10
+
+[sub_resource type="Resource" id=119]
+script = ExtResource( 6 )
+time = 0.0
+type = 2
+bullet_or_floor = 1
+position_x = "0"
+position_y = "300"
+speed_x = "0"
+speed_y = "0"
+size = "256"
+rotation_degrees = "0"
+torque_degrees = "360"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 1.566
+dance_floor_here_time = 0.13
+drawing_extra = [ 4.5 ]
+
+[sub_resource type="Resource" id=120]
+script = ExtResource( 12 )
+time = 93.26
+key = SubResource( 119 )
+modifiers = {
+"position_x": "str([200, 824][i])"
+}
+is_time_modifier_xi = true
+time_modifier = "0"
+times = 2
+
+[sub_resource type="Resource" id=114]
+script = ExtResource( 8 )
+time = 0.0
+index = 6
+inputs = {
+"position": "Vector2()",
+"time": "1.826"
+}
+
+[sub_resource type="Resource" id=115]
+resource_name = "StripeCubes"
+script = ExtResource( 12 )
+time = 93.651
+key = SubResource( 114 )
+modifiers = {
+":inputs:position": "\"Vector2(%s, 300)\" % if3(200, i % 2, 824)",
+":inputs:time": "str(if3(1.043, i == 3, 1.826))"
+}
+is_time_modifier_xi = true
+time_modifier = "2.08696"
+times = 4
+
+[sub_resource type="Resource" id=111]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.044
+end_time_offset = 15.521
+position_x = "1024"
+position_y = "0"
+type = 0
+create_time = 0.001
+create_times = 33
+speed_x = "-32"
+speed_y = "0"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 0.0
+sin_y = 8.0
+sin_freq = 3.0
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.25
+sin_rotates = false
+dna_couple = false
+
+[sub_resource type="Resource" id=110]
+script = ExtResource( 12 )
+time = 93.782
+key = SubResource( 111 )
+modifiers = {
+"position_y": "[4, 596][i]"
+}
+is_time_modifier_xi = true
+time_modifier = "0"
+times = 2
+
+[sub_resource type="Resource" id=112]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 0.261
+end_time_offset = 0.261
+position_x = "rand_range(200, 824)"
+position_y = "0"
+type = 0
+create_time = 0.052
+create_times = -1
+speed_x = "0"
+speed_y = "0"
+size = 19.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 10.0
+sin_y = 0.0
+sin_freq = 0.25
+sin_lifetime_base = "rand_range(0, TAU)"
+sin_lifetime_multi = 0.5
+sin_rotates = false
+dna_couple = false
+
+[sub_resource type="Resource" id=113]
+script = ExtResource( 12 )
+time = 94.695
+key = SubResource( 112 )
+modifiers = {
+"position_y": "str(if3(0, i % 2, 600))",
+"speed_y": "str(if3(20, i % 2, -20))"
+}
+is_time_modifier_xi = true
+time_modifier = ".26087 * 2"
+times = 31
+
+[sub_resource type="Resource" id=123]
+script = ExtResource( 6 )
+time = 0.0
+type = 2
+bullet_or_floor = 1
+position_x = "0"
+position_y = "300"
+speed_x = "0"
+speed_y = "0"
+size = "192"
+rotation_degrees = "0"
+torque_degrees = "0"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 1.044
+dance_floor_here_time = 0.652
+drawing_extra = [ 4.5 ]
+
+[sub_resource type="Resource" id=124]
+script = ExtResource( 12 )
+time = 101.217
+key = SubResource( 123 )
+modifiers = {
+"position_x": "str([200, 824][i])",
+"torque_degrees": "str(720 * [1, -1][i])"
+}
+is_time_modifier_xi = true
+time_modifier = "0"
+times = 2
+
+[sub_resource type="Resource" id=125]
+resource_name = "StripeCubes"
+script = ExtResource( 12 )
+time = 101.869
+key = SubResource( 114 )
+modifiers = {
+":inputs:position": "\"Vector2(%s, 300)\" % if3(200, i % 2, 824)",
+":inputs:time": "str(if3(1.043, i == 3, 1.826))"
+}
+is_time_modifier_xi = true
+time_modifier = "2.08696"
+times = 2
+
+[sub_resource type="Resource" id=121]
+script = ExtResource( 1 )
+time = 0.0
+spawn_time_offset = 0.0
+end_time_offset = 0.0
+position_x = "0"
+position_y = "300"
+base_rotation = "0"
+torque = 0.0
+amount = 10
+time_offset = 0.033
+spin_count = 1
+bullet_type = 0
+bullet_speed = 300.0
+bullet_size = 16.0
+bullet_extras = {
+"torque": "TAU"
+}
+
+[sub_resource type="Resource" id=122]
+script = ExtResource( 12 )
+time = 102.261
+key = SubResource( 121 )
+modifiers = {
+"base_rotation": "str([-0.25, -0.75][i] * PI)",
+"position_x": "str([200, 824][i])",
+"torque": "0.05 * PI * [1, -1][i]"
+}
+is_time_modifier_xi = true
+time_modifier = "0"
+times = 2
+
+[sub_resource type="Resource" id=126]
+resource_name = "StripeCubes"
+script = ExtResource( 12 )
+time = 106.043
+key = SubResource( 114 )
+modifiers = {
+":inputs:position": "\"Vector2(%s, 300)\" % if3(200, i % 2, 824)",
+":inputs:time": "\"1.042\""
+}
+is_time_modifier_xi = true
+time_modifier = "0.521 * 2"
+times = 4
+
+[sub_resource type="Resource" id=133]
+script = ExtResource( 8 )
+time = 0.0
+index = 7
+inputs = {
+"invert": "false"
+}
+
+[sub_resource type="Resource" id=129]
+resource_name = "TwinTracks"
+script = ExtResource( 12 )
+time = 109.955
+key = SubResource( 133 )
+modifiers = {
+":inputs:invert": "if3(\"false\", i % 2 == 0, \"true\")"
+}
+is_time_modifier_xi = true
+time_modifier = "2.08696"
+times = 8
+
+[sub_resource type="Resource" id=127]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.044
+end_time_offset = 16.565
+position_x = "0"
+position_y = "0"
+type = 0
+create_time = 0.001
+create_times = 20
+speed_x = "0"
+speed_y = "32"
+size = 30.0
+rotation = "0"
+torque = "0"
+auto_despawn = true
+sin_x = 8.0
+sin_y = 0.0
+sin_freq = 3.0
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.25
+sin_rotates = false
+dna_couple = false
+
+[sub_resource type="Resource" id=128]
+script = ExtResource( 12 )
+time = 110.478
+key = SubResource( 127 )
+modifiers = {
+"position_x": "str([0, 1024][i])"
+}
+is_time_modifier_xi = true
+time_modifier = "0"
+times = 2
+
+[sub_resource type="Resource" id=138]
+script = ExtResource( 8 )
+time = 0.0
+index = 8
+inputs = {
+}
+
+[sub_resource type="Resource" id=134]
+script = ExtResource( 12 )
+time = 112.565
+key = SubResource( 138 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "2.08696"
+times = 7
+
+[sub_resource type="Resource" id=142]
+script = ExtResource( 8 )
+time = 126.912
+index = 2
+inputs = {
+"position": "Vector2(0, 150)"
+}
+
+[sub_resource type="Resource" id=143]
+script = ExtResource( 8 )
+time = 126.912
+index = 2
+inputs = {
+"position": "Vector2(1024, 450)"
+}
+
+[sub_resource type="Resource" id=144]
+script = ExtResource( 6 )
+time = 128.738
+type = 2
+bullet_or_floor = 1
+position_x = "512"
+position_y = "300"
+speed_x = "0"
+speed_y = "0"
+size = "23.272 * 3"
+rotation_degrees = "0"
+torque_degrees = "360"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 1.566
+dance_floor_here_time = 0.522
+drawing_extra = [ 1.5 ]
+
+[sub_resource type="Resource" id=147]
+script = ExtResource( 15 )
+time = 0.0
+vector = Vector2( 0, -25 )
+
+[sub_resource type="Resource" id=148]
+script = ExtResource( 12 )
+time = 130.304
+key = SubResource( 147 )
+modifiers = {
+}
+is_time_modifier_xi = true
+time_modifier = "0.26087 * 2"
+times = 4
+
+[sub_resource type="Resource" id=145]
+script = ExtResource( 6 )
+time = 0.0
+type = 2
+bullet_or_floor = 1
+position_x = "512"
+position_y = "300"
+speed_x = "0"
+speed_y = "0"
+size = "16"
+rotation_degrees = "0"
+torque_degrees = "360"
+sin_x = 0.0
+sin_y = 0.0
+sin_freq = 0.0
+sin_lifetime = "0"
+sin_rotates = false
+dance_floor_warn_time = 0.261
+dance_floor_here_time = 0.522
+drawing_extra = [  ]
+
+[sub_resource type="Resource" id=146]
+script = ExtResource( 12 )
+time = 130.565
+key = SubResource( 145 )
+modifiers = {
+"drawing_extra": "[2.5 + i]",
+"size": "str(23.272 * (5 + 2 * i))"
+}
+is_time_modifier_xi = true
+time_modifier = "0.522"
+times = 3
+
+[sub_resource type="Resource" id=156]
+script = ExtResource( 10 )
+time = 0.0
+spawn_time_offset = 1.566
+end_time_offset = 6.783
+position_x = "0"
+position_y = "0"
+type = 0
+create_time = 0.056
+create_times = 20
+speed_x = "32"
+speed_y = "0"
+size = 30.0
+rotation = "0.5 * PI"
+torque = "0"
+auto_despawn = true
+sin_x = 150.0
+sin_y = 0.0
+sin_freq = 0.25
+sin_lifetime_base = "0"
+sin_lifetime_multi = 0.2
+sin_rotates = false
+dna_couple = true
+
+[sub_resource type="Resource" id=155]
+resource_name = "SideTracks"
+script = ExtResource( 12 )
+time = 130.825
+key = SubResource( 156 )
+modifiers = {
+"end_time_offset": "if3(6.783, i < 2, 9.2601)",
+"position_x": "str(if3(150, i % 2 == 0, 1024 - 150))",
+"position_y": "str(if3(0, i < 2, 600))",
+"rotation": "str(0.5 * PI * if3(1, i < 2, -1))"
+}
+is_time_modifier_xi = false
+time_modifier = "if3(0, i < 2, 6.7826)"
+times = 4
+
+[sub_resource type="Resource" id=153]
+script = ExtResource( 8 )
+time = 0.0
+index = 9
+inputs = {
+"clockwise": "true"
+}
+
+[sub_resource type="Resource" id=152]
+script = ExtResource( 12 )
+time = 132.391
+key = SubResource( 153 )
+modifiers = {
+":inputs:clockwise": "if3(\"true\", i % 2 == 0, \"false\")"
+}
+is_time_modifier_xi = true
+time_modifier = "4.174"
+times = 4
+
+[sub_resource type="Resource" id=158]
+script = ExtResource( 9 )
+time = 0.0
+spawn_time_offset = 1.044
+end_time_offset = 0.522
+position_x = "512"
+position_y = "0"
+_scene = ExtResource( 4 )
+_extras = {
+"direction": "0",
+"shake": "true",
+"size": "10"
+}
+
+[sub_resource type="Resource" id=159]
+script = ExtResource( 12 )
+time = 134.086
+key = SubResource( 158 )
+modifiers = {
+":extras:direction": "str(if3(0, i < 2, PI))",
+"position_y": "str([100, 200, 400, 500][i])"
+}
+is_time_modifier_xi = false
+time_modifier = "if3(0, i < 2, 0.522)"
+times = 4
+
+[sub_resource type="Resource" id=160]
+script = ExtResource( 12 )
+time = 142.434
+key = SubResource( 158 )
+modifiers = {
+":extras:direction": "str(if3(0, i < 2, PI))",
+"position_y": "str([100, 200, 400, 500][i])"
+}
+is_time_modifier_xi = false
+time_modifier = "if3(0, i < 2, 0.522)"
+times = 4
+
+[sub_resource type="Resource" id=161]
+script = ExtResource( 8 )
+time = 147.782
+index = 2
+inputs = {
+"position": "Vector2(512, 300)"
+}
+
+[resource]
+script = ExtResource( 11 )
+song = ExtResource( 5 )
+song_name = "+ERABY+E CONNEC+10N"
+song_artist = "Camellia"
+song_is_remix = false
+song_playlist = "Tera I/O"
+song_cover = ExtResource( 16 )
+playback_pos = 60.0
+key_list = [ SubResource( 55 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 24 ), SubResource( 32 ), SubResource( 34 ), SubResource( 35 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 51 ), SubResource( 57 ), SubResource( 54 ), SubResource( 62 ), SubResource( 65 ), SubResource( 66 ), SubResource( 69 ), SubResource( 70 ), SubResource( 67 ), SubResource( 75 ), SubResource( 81 ), SubResource( 72 ), SubResource( 78 ), SubResource( 83 ), SubResource( 85 ), SubResource( 86 ), SubResource( 88 ), SubResource( 89 ), SubResource( 91 ), SubResource( 95 ), SubResource( 92 ), SubResource( 97 ), SubResource( 96 ), SubResource( 99 ), SubResource( 98 ), SubResource( 100 ), SubResource( 101 ), SubResource( 103 ), SubResource( 102 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 109 ), SubResource( 120 ), SubResource( 115 ), SubResource( 110 ), SubResource( 113 ), SubResource( 124 ), SubResource( 125 ), SubResource( 122 ), SubResource( 126 ), SubResource( 129 ), SubResource( 128 ), SubResource( 134 ), SubResource( 142 ), SubResource( 143 ), SubResource( 144 ), SubResource( 148 ), SubResource( 146 ), SubResource( 155 ), SubResource( 152 ), SubResource( 159 ), SubResource( 160 ), SubResource( 161 ) ]
+checkpoints = [ 12.042, 56.001, 86.39, 124.0, 149.087 ]
+hazard_group_list = [ SubResource( 26 ), SubResource( 30 ), SubResource( 50 ), SubResource( 61 ), SubResource( 77 ), SubResource( 94 ), SubResource( 118 ), SubResource( 132 ), SubResource( 137 ), SubResource( 151 ) ]
+is_hardcore = false
+other_variant = "res://resources/level_structs/songs/terabyte_connection_h.tres"

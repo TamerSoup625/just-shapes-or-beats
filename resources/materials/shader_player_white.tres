@@ -1,0 +1,28 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
+
+// Colors the whole thing white
+// But also makes circular sector of sprite
+
+float PI(){
+	return 3.1415926535897932384626433833;
+}
+
+float TAU(){
+	return 6.28318530718;
+}
+
+void fragment(){
+	COLOR = texture(TEXTURE, UV);
+	COLOR.rgb = vec3(1);
+	float sector = MODULATE.g * TAU() - PI();
+	float angle = atan(UV.x - 0.5, UV.y - 0.5);
+	if(angle >= sector){
+		COLOR.a = 0.0;
+	}
+}"
+
+[resource]
+shader = SubResource( 5 )
