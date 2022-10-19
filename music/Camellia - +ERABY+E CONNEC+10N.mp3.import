@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Camellia - +ERABY+E CONNEC+10N.mp3-bd53747528ddbff9989aa7924c9adad0.mp3str"
+
+[deps]
+
+source_file="res://music/Camellia - +ERABY+E CONNEC+10N.mp3"
+dest_files=[ "res://.import/Camellia - +ERABY+E CONNEC+10N.mp3-bd53747528ddbff9989aa7924c9adad0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
