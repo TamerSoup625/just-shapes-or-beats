@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="16"
+   viewBox="0 0 8.4666665 4.2333335"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="theme_checkbox.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#000000"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="19.230447"
+     inkscape:cx="18.954317"
+     inkscape:cy="7.228121"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:0.5;stroke-width:0.264582;stroke-linecap:round;stop-color:#000000"
+       id="rect848"
+       width="3.7041667"
+       height="3.7041667"
+       x="0.26458335"
+       y="0.26458335" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.5;stroke-width:0.264582;stroke-linecap:round;stop-color:#000000"
+       id="rect848-4"
+       width="3.7041667"
+       height="3.7041667"
+       x="4.4979167"
+       y="0.26458335" />
+    <path
+       style="fill:#00ffff;fill-opacity:1;stroke-width:0.264583;stroke-linecap:round;stop-color:#000000"
+       d="M 5.8208335,3.4395834 4.7625001,2.3812501 5.2916668,1.8520834 5.8208335,2.3812501 7.4083335,0.79375002 7.9375002,1.3229167 Z"
+       id="path1042" />
+  </g>
+</svg>

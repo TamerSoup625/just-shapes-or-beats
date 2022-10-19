@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 4.2333332 4.2333335"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="player_square_inside.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="27.19596"
+     inkscape:cx="9.9647153"
+     inkscape:cy="7.5746545"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#00ffff;stroke-width:0.264583;stroke-linecap:round;stop-color:#000000;fill-opacity:0.25"
+       id="rect870"
+       width="4.2333331"
+       height="4.2333331"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#00ffff;stroke-width:0.26458332;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:0.26458332,1.05833327;stroke-opacity:1;stop-color:#000000;stroke-dashoffset:0"
+       id="rect1224"
+       width="3.9687505"
+       height="3.9687505"
+       x="0.1322915"
+       y="0.1322915" />
+  </g>
+</svg>
