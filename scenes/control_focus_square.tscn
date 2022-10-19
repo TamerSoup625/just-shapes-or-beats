@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/control_focus_square.gd" type="Script" id=1]
+[ext_resource path="res://images/player_square.svg" type="Texture" id=2]
+
+[node name="ControlFocusSquare" type="CanvasLayer"]
+pause_mode = 2
+layer = 100
+script = ExtResource( 1 )
+
+[node name="DummyControl" type="Control" parent="."]
+mouse_filter = 2
+__meta__ = {
+"_editor_description_": "Just to get who has focus"
+}
+
+[node name="Square" type="Sprite" parent="."]
+texture = ExtResource( 2 )

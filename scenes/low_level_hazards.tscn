@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/low_level_hazards.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+bake_resolution = 20
+_data = [ Vector2( 0, 0 ), 0.0, 4.9081, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=2]
+bake_resolution = 20
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -4.0, 4.9081, 0, 0 ]
+
+[node name="LoLevelHaz" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Class for low-level hazards (the bullets)"
+}
+appear_curve = SubResource( 1 )
+disappear_curve = SubResource( 2 )

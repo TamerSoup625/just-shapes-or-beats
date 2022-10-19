@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/fonts/NexaBold/Nexa Bold.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/menu_track.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+draw_center = false
+border_width_bottom = 1
+border_color = Color( 0.498039, 0.498039, 0.498039, 0.498039 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="MenuTrack" type="PanelContainer"]
+anchor_right = 1.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 0, 26 )
+focus_mode = 2
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="HBox" type="HBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 25.0
+
+[node name="NameLabel" type="Label" parent="HBox"]
+unique_name_in_owner = true
+margin_top = 4.0
+margin_right = 474.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 1 )
+text = "Name"
+uppercase = true
+
+[node name="VSeparator" type="VSeparator" parent="HBox"]
+unique_name_in_owner = true
+margin_left = 478.0
+margin_right = 482.0
+margin_bottom = 25.0
+
+[node name="ArtistLabel" type="Label" parent="HBox"]
+unique_name_in_owner = true
+margin_left = 486.0
+margin_top = 5.0
+margin_right = 960.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Artist"
+
+[node name="VSeparator2" type="VSeparator" parent="HBox"]
+unique_name_in_owner = true
+margin_left = 964.0
+margin_right = 968.0
+margin_bottom = 25.0
+
+[node name="RankNormal" type="TextureRect" parent="HBox"]
+unique_name_in_owner = true
+margin_left = 972.0
+margin_right = 996.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 24, 0 )
+expand = true
+stretch_mode = 6
+
+[node name="RankHardcore" type="TextureRect" parent="HBox"]
+unique_name_in_owner = true
+margin_left = 1000.0
+margin_right = 1024.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 24, 0 )
+expand = true
+stretch_mode = 6
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]

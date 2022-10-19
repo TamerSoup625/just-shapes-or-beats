@@ -1,0 +1,568 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://resources/main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/main_btn.gd" type="Script" id=2]
+[ext_resource path="res://images/logo.png" type="Texture" id=3]
+[ext_resource path="res://scenes/menu.gd" type="Script" id=4]
+[ext_resource path="res://resources/fonts/NexaBold/Nexa Bold.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://icon.png" type="Texture" id=6]
+[ext_resource path="res://resources/fonts/NexaBold/Nexa Light.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://scenes/diff_select.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/pause_menu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/focus_square_hotspot.gd" type="Script" id=10]
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 0, 0, 0, 1 )
+skew = Vector2( -0.75, 0 )
+border_width_left = 10
+border_color = Color( 0.45, 0.054, 0.2388, 1 )
+expand_margin_right = 250.0
+
+[sub_resource type="Animation" id=12]
+resource_name = "PlayerDance"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 360, 420 ), Vector2( 355, 416 ), Vector2( 360, 420 ), Vector2( 365, 416 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -90.0002, -105.0, -90.0002, -75.0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 360, 420 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -90.0002 ]
+}
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0235294, 0.298039, 0.388235, 0.498039 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 12
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0.5, 0.5, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.25098 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 896
+use_mipmaps = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 24
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 32
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 24
+font_data = ExtResource( 7 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="Main" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MainBtn" type="Button" parent="Main"]
+unique_name_in_owner = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -228.0
+margin_top = -31.0
+margin_bottom = 31.0
+theme_type_variation = "MainBtn"
+text = "PLAY"
+align = 0
+script = ExtResource( 2 )
+
+[node name="ExitBtn" type="Button" parent="Main"]
+unique_name_in_owner = true
+anchor_left = 1.0
+anchor_top = 0.85
+anchor_right = 1.0
+anchor_bottom = 0.85
+margin_left = -100.0
+margin_top = -20.0
+margin_bottom = 20.0
+theme_type_variation = "MainBtn"
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 15 )
+custom_styles/normal = SubResource( 15 )
+text = "EXIT"
+align = 0
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="Main"]
+margin_left = 125.0
+margin_top = 108.0
+margin_right = 1225.0
+margin_bottom = 666.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+
+[node name="Player" type="Polygon2D" parent="Main"]
+position = Vector2( 360, 420 )
+rotation = -1.5708
+color = Color( 0, 1, 1, 1 )
+polygon = PoolVector2Array( -8, 8, -8, -8, 8, -8, 8, 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main"]
+autoplay = "PlayerDance"
+anims/PlayerDance = SubResource( 12 )
+anims/RESET = SubResource( 13 )
+
+[node name="Tracks" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Side" type="Panel" parent="Tracks"]
+anchor_bottom = 1.0
+margin_top = 32.0
+margin_right = 196.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="TracksSideStuff" type="Control" parent="Tracks/Side"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TrackName" type="Label" parent="Tracks/Side/TracksSideStuff"]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -80.0
+margin_top = 40.0
+margin_right = 80.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 5 )
+text = "h"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+
+[node name="TrackByRemixed" type="Label" parent="Tracks/Side/TracksSideStuff"]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -80.0
+margin_top = 160.0
+margin_right = 80.0
+margin_bottom = 172.0
+custom_fonts/font = SubResource( 6 )
+text = "Remixed by"
+align = 1
+
+[node name="TrackArtist" type="Label" parent="Tracks/Side/TracksSideStuff"]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -80.0
+margin_top = 200.0
+margin_right = 80.0
+margin_bottom = 216.0
+custom_fonts/font = SubResource( 7 )
+text = "Camellia"
+align = 1
+
+[node name="From" type="Label" parent="Tracks/Side/TracksSideStuff"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -80.0
+margin_top = 280.0
+margin_right = 80.0
+margin_bottom = 292.0
+custom_fonts/font = SubResource( 8 )
+text = "From"
+align = 1
+
+[node name="TrackPlaylist" type="Label" parent="Tracks/Side/TracksSideStuff"]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -80.0
+margin_top = 320.0
+margin_right = 80.0
+margin_bottom = 336.0
+custom_fonts/font = SubResource( 7 )
+text = "+ERA 1/0"
+align = 1
+
+[node name="TrackCover" type="TextureRect" parent="Tracks/Side/TracksSideStuff"]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_top = 400.0
+margin_right = 64.0
+margin_bottom = 528.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="Top" type="Panel" parent="Tracks"]
+anchor_right = 1.0
+margin_bottom = 32.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="TrackBackBtn" type="ToolButton" parent="Tracks/Top"]
+unique_name_in_owner = true
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 4.0
+margin_top = -12.0
+margin_right = 48.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 3 )
+text = "< Back"
+script = ExtResource( 10 )
+_FOCUS_SQUARE_HOTSPOT = Vector2( 80, 0 )
+
+[node name="List" type="Panel" parent="Tracks"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 204.0
+margin_top = 40.0
+margin_right = -8.0
+margin_bottom = -8.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="LevelChoose" type="ScrollContainer" parent="Tracks"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 212.0
+margin_top = 48.0
+margin_right = -16.0
+margin_bottom = -16.0
+scroll_horizontal_enabled = false
+
+[node name="LevelChooseBox" type="VBoxContainer" parent="Tracks/LevelChoose"]
+unique_name_in_owner = true
+margin_right = 796.0
+size_flags_horizontal = 3
+custom_constants/separation = 10
+
+[node name="LetsGo" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="LetsGo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2048.0
+margin_top = -1200.0
+margin_right = 2048.0
+margin_bottom = 1200.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.063, 0.063 )
+rect_pivot_offset = Vector2( 2048, 1200 )
+theme_type_variation = "BigLabel"
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "let's go"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="SelectDifficulty" type="Control" parent="."]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -150.0
+margin_bottom = 150.0
+
+[node name="ColorRect" type="ColorRect" parent="SelectDifficulty"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -150.0
+margin_bottom = 150.0
+color = Color( 0, 0, 0, 0.498039 )
+
+[node name="Panel" type="Panel" parent="SelectDifficulty"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 9 )
+
+[node name="Label" type="Label" parent="SelectDifficulty/Panel"]
+anchor_right = 1.0
+margin_bottom = 75.0
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Select difficulty"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="SelectDiffHBox" type="HBoxContainer" parent="SelectDifficulty/Panel"]
+unique_name_in_owner = true
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -225.0
+margin_right = -64.0
+margin_bottom = -16.0
+alignment = 1
+
+[node name="DiffSelect" parent="SelectDifficulty/Panel/SelectDiffHBox" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 120.0
+margin_right = 336.0
+margin_bottom = 209.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+
+[node name="VBoxContainer" parent="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect" index="0"]
+margin_right = 200.0
+margin_bottom = 209.0
+
+[node name="Button" parent="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect/VBoxContainer" index="0"]
+margin_right = 184.0
+margin_bottom = 166.0
+
+[node name="Label" parent="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect/VBoxContainer" index="1"]
+margin_top = 174.0
+margin_right = 184.0
+margin_bottom = 209.0
+
+[node name="DiffSelect2" parent="SelectDifficulty/Panel/SelectDiffHBox" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 340.0
+margin_right = 556.0
+margin_bottom = 209.0
+focus_neighbour_top = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+
+[node name="VBoxContainer" parent="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect2" index="0"]
+margin_right = 200.0
+margin_bottom = 209.0
+
+[node name="Button" parent="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect2/VBoxContainer" index="0"]
+modulate = Color( 0, 1, 1, 1 )
+margin_right = 184.0
+margin_bottom = 166.0
+text = "NORMAL"
+
+[node name="Label" parent="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect2/VBoxContainer" index="1"]
+margin_top = 174.0
+margin_right = 184.0
+margin_bottom = 209.0
+text = "- Get ranks
+- Hard fun!"
+
+[node name="DiffSelect3" parent="SelectDifficulty/Panel/SelectDiffHBox" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 560.0
+margin_right = 776.0
+margin_bottom = 209.0
+focus_neighbour_top = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+
+[node name="VBoxContainer" parent="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect3" index="0"]
+margin_right = 200.0
+margin_bottom = 209.0
+
+[node name="Button" parent="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect3/VBoxContainer" index="0"]
+modulate = Color( 0.890196, 0.109804, 0.47451, 1 )
+margin_right = 184.0
+margin_bottom = 166.0
+text = "HARDCORE"
+
+[node name="Label" parent="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect3/VBoxContainer" index="1"]
+margin_top = 174.0
+margin_right = 184.0
+margin_bottom = 209.0
+text = "- More danger
+- Brutal fun!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = "MusicWSpectrum"
+
+[node name="PauseMenu" parent="." instance=ExtResource( 9 )]
+visible = false
+is_in_main_menu = true
+
+[node name="ExitPopup" type="Popup" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -125.0
+margin_bottom = 125.0
+
+[node name="Bg" type="ColorRect" parent="ExitPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -300.0
+margin_bottom = 300.0
+color = Color( 0, 0, 0, 0.498039 )
+
+[node name="Base" type="ColorRect" parent="ExitPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="ExitPopup/Base"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -126.0
+margin_top = 16.0
+margin_right = 126.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "are you sure?"
+uppercase = true
+
+[node name="Label2" type="Label" parent="ExitPopup/Base"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -25.5
+margin_bottom = 25.5
+custom_fonts/font = SubResource( 17 )
+text = "Are you sure you want to leave the game?"
+align = 1
+valign = 1
+
+[node name="ExitConfirm" type="ToolButton" parent="ExitPopup/Base"]
+anchor_left = 0.4
+anchor_top = 1.0
+anchor_right = 0.4
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -48.0
+margin_right = 64.0
+margin_bottom = -16.0
+custom_colors/font_color_disabled = Color( 0, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 0, 1, 1, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 1, 1 )
+text = "Exit"
+
+[node name="ExitCancel" type="ToolButton" parent="ExitPopup/Base"]
+anchor_left = 0.6
+anchor_top = 1.0
+anchor_right = 0.6
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -48.0
+margin_right = 64.0
+margin_bottom = -16.0
+custom_colors/font_color_disabled = Color( 0, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 0, 1, 1, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 1, 1 )
+text = "Cancel"
+
+[connection signal="pressed" from="Main/MainBtn" to="." method="_on_MainPlayBtn_pressed"]
+[connection signal="pressed" from="Main/ExitBtn" to="." method="_on_ExitBtn_pressed"]
+[connection signal="pressed" from="Tracks/Top/TrackBackBtn" to="." method="_on_TracksBackBtn_pressed"]
+[connection signal="visibility_changed" from="LetsGo" to="." method="_on_LetsGo_visibility_changed"]
+[connection signal="pressed" from="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect/VBoxContainer/Button" to="." method="diff_btn_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect2/VBoxContainer/Button" to="." method="diff_btn_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect3/VBoxContainer/Button" to="." method="diff_btn_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="ExitPopup/Base/ExitConfirm" to="." method="_on_ExitConfirm_pressed"]
+[connection signal="pressed" from="ExitPopup/Base/ExitCancel" to="." method="_on_ExitCancel_pressed"]
+
+[editable path="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect"]
+[editable path="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect2"]
+[editable path="SelectDifficulty/Panel/SelectDiffHBox/DiffSelect3"]

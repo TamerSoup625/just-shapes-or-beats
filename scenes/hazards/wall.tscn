@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/hazards/wall.gd" type="Script" id=1]
+[ext_resource path="res://resources/hazard_appear_gradient.tres" type="Gradient" id=2]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.5, 1 )
+colors = PoolColorArray( 0.890196, 0.109804, 0.47451, 0.498039, 0.890196, 0.109804, 0.47451, 0.247059, 0.890196, 0.109804, 0.47451, 0.498039 )
+
+[sub_resource type="RectangleShape2D" id=1]
+resource_local_to_scene = true
+extents = Vector2( 600, 10 )
+
+[node name="Wall" type="Node2D"]
+script = ExtResource( 1 )
+wind_affected = false
+wall_gradient = ExtResource( 2 )
+warn_gradient = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -600, 0 )
+shape = SubResource( 1 )

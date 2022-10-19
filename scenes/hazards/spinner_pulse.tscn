@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/hazards/spinner_pulse.gd" type="Script" id=1]
+
+[node name="SpinnerPulse" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Creates bullets in a rotatory pattern, or a circle of bullets like pulse bombs"
+}

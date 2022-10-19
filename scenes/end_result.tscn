@@ -1,0 +1,336 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/end_result.gd" type="Script" id=1]
+[ext_resource path="res://resources/main_theme.tres" type="Theme" id=2]
+[ext_resource path="res://resources/fonts/NexaBold/Nexa Bold.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 896
+use_mipmaps = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Completed"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrackComplete:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.063, 0.063 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TrackComplete:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 1.7, 2.2 ),
+"transitions": PoolRealArray( 1, 0.5, 2, 1 ),
+"update": 0,
+"values": [ Vector2( -3733, -148 ), Vector2( -3733, -148 ), Vector2( -3858, -148 ), Vector2( -2709, -148 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TrackComplete:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Results:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2.5, 4.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_rank_anim"
+}, {
+"args": [  ],
+"method": "allow_continue"
+} ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath(".:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "CompletedParty"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrackComplete:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.063, 0.063 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TrackComplete:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 1.7, 2.2 ),
+"transitions": PoolRealArray( 1, 0.5, 2, 1 ),
+"update": 0,
+"values": [ Vector2( -3733, -148 ), Vector2( -3733, -148 ), Vector2( -3858, -148 ), Vector2( -2709, -148 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TrackComplete:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "do_continue"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Results:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TrackComplete:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.063, 0.063 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TrackComplete:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -3733, -148 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TrackComplete:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Results:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[node name="EndResult" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="TrackComplete" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -4245.0
+margin_top = -448.0
+margin_right = 4245.0
+margin_bottom = 448.0
+rect_scale = Vector2( 0.063, 0.063 )
+rect_pivot_offset = Vector2( 4245, 448 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "track completed"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Results" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Above" type="ColorRect" parent="Results"]
+unique_name_in_owner = true
+anchor_right = 1.0
+margin_bottom = 24.0
+color = Color( 0, 1, 1, 1 )
+
+[node name="ResultTxt" type="Label" parent="Results/Above"]
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 256.0
+custom_fonts/font = SubResource( 5 )
+text = "results"
+valign = 1
+uppercase = true
+
+[node name="HardcoreTxt" type="Label" parent="Results/Above"]
+unique_name_in_owner = true
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -256.0
+margin_top = 2.0
+margin_right = -4.0
+custom_fonts/font = SubResource( 5 )
+text = "hardcore"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="ResultVBox" type="VBoxContainer" parent="Results"]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -256.0
+margin_right = 512.0
+margin_bottom = 256.0
+alignment = 1
+
+[node name="Below" type="ColorRect" parent="Results"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -24.0
+color = Color( 0, 0, 0, 0.498039 )
+
+[node name="Label" type="Label" parent="Results/Below"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -77.5
+margin_top = -8.0
+margin_right = 77.5
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0, 0.498039, 0.498039, 1 )
+text = "Continue: [Space]/[A]"
+
+[node name="BlackFade" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Completed = SubResource( 2 )
+anims/CompletedParty = SubResource( 6 )
+anims/RESET = SubResource( 3 )

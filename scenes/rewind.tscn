@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/rewind.gd" type="Script" id=1]
+[ext_resource path="res://resources/main_theme.tres" type="Theme" id=2]
+
+[node name="Rewind" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 1, 1, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -256.0
+margin_top = -256.0
+margin_right = 256.0
+margin_bottom = 256.0
+theme_type_variation = "BigLabel"
+text = "3"
+align = 1
+valign = 1

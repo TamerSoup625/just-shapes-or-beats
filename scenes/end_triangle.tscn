@@ -1,0 +1,242 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/end_triangle.gd" type="Script" id=1]
+[ext_resource path="res://images/end_triangle.png" type="Texture" id=2]
+[ext_resource path="res://images/end_tri_circular.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 28.0
+
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
+
+uniform float size;
+
+float distance_to_middle(vec2 uv){
+	return length(uv - vec2(0.5));
+}
+
+void fragment(){
+	if(distance_to_middle(UV) <= size){
+		COLOR = vec4(0);
+	} else {
+		COLOR = vec4(1);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+shader_param/size = 0.0
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray(  )
+colors = PoolColorArray(  )
+
+[sub_resource type="GradientTexture2D" id=8]
+gradient = SubResource( 7 )
+width = 2048
+height = 2048
+
+[sub_resource type="Animation" id=2]
+resource_name = "Base"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Triangle:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.3, 3.7, 3.71, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 360.0, 0.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Triangle:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 3.3, 3.7, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -32 ), Vector2( 0, -32 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Collect"
+length = 2.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Triangle:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -64 ), Vector2( 0, -64 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Triangle:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 30.0, 30.0, -720.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("EndGrab:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("EndGrab:material:shader_param/size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.6, 2.1, 2.3 ),
+"transitions": PoolRealArray( 0.5, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.707, 0.05, 0.05, 0.707 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Triangle:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "triangle_collected"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Triangle:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Triangle:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("EndGrab:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("EndGrab:material:shader_param/size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Triangle:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[node name="EndTriangle" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Circulars" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Circulars"]
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="Circulars"]
+rotation = 3.14159
+texture = ExtResource( 3 )
+
+[node name="Triangle" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+offset = Vector2( 0, -3 )
+
+[node name="EndGrab" type="Sprite" parent="."]
+visible = false
+material = SubResource( 6 )
+texture = SubResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Base"
+anims/Base = SubResource( 2 )
+anims/Collect = SubResource( 4 )
+anims/RESET = SubResource( 3 )
+
+[connection signal="area_entered" from="." to="." method="_on_EndTriangle_area_entered"]
