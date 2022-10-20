@@ -188,6 +188,7 @@ An example of an expression is "20 + 10\*2 - 5/2.0". The basic operations are:
 Spaces between operators are optional. Keep in mind the usual [order of operations](https://en.wikipedia.org/wiki/Order_of_operations) applies. You can use parenthesis to override the order of operations.
 An expression can also do operations for any other type of values, such as booleans (true/false) or strings of text.
 Sometimes, expressions can have some variables as an input. These can be accessed with the name of the variable itself (e.g. "i % 5" will give the remainder of the variable "i" divided by 5)
+
 Expression can also contain Godot's built-in methods. You can find most of the usuable built-in methods [here](https://docs.godotengine.org/it/stable/classes/class_%40gdscript.html). Methods are called with their name followed by parenthesis and possible arguments (e.g. "rand_range(-100, 100)" or "randi()").
 The most common methods are [rand_range](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-rand-range) and [randi](https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-randi), which are very useful for making ranodmized hazards.
 This game also has a custom method *if3*. It accepts three arguments: if the second value returns *true*, then the method will return the first value, or else it will return the third. This is an alias to Godot's [ternary if](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#if-else-elif).
