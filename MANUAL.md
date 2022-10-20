@@ -198,6 +198,7 @@ Some common operators for booleans (true/false) are:
 + *Lesser than*: "\<"
 + *Greater or equal than*: "\>="
 + *Lesser or equal than*: "\<="
+
 Here are some of the most common expression snippets. These snippets can also be combined for more complex behaviour.
 + "rand_range(a, b)": Returns a random real number between *a* and *b*.
 + "randi() % a": Returns a random integer between 0 and (*a* - 1).
