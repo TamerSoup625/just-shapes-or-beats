@@ -64,7 +64,7 @@ onready var spectrum: AudioEffectSpectrumAnalyzerInstance = AudioServer.get_bus_
 # Show only the main one
 func _ready():
 	# Removes the exit button for platforms that make the button useless or work incorrectly (like web)
-	if OS.has_feature("web"):
+	if OS.has_feature("web") or OS.has_feature("HTML5"):
 		ExitBtn.hide()
 	
 	SelectDifficulty.hide()
